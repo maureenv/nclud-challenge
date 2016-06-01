@@ -81,11 +81,8 @@ body, h1, h2, h3, h4, div, p {
   padding-bottom: 20px;
   max-width: 300px; }
 
-.no-opacity {
-  opacity: 0; }
-
-.full-opacity {
-  opacity: 1; }
+.no-display {
+  display: none; }
 
 .blue-background, .blue-bg-text, .masthead, .the-funds, .investments, .capabilities {
   background-color: #033e66; }
@@ -327,10 +324,6 @@ body, h1, h2, h3, h4, div, p {
       display: block; } }
 
 .nav-image-container .small-logo {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
   position: absolute;
   right: 0;
   z-index: 2; }

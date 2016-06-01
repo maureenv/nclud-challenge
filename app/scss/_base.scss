@@ -90,13 +90,11 @@ $dark-blue: #002947;
   }
 }
 
-.no-opacity{
-  opacity: 0;
+.no-display{
+  display: none;
 }
 
-.full-opacity{
-  opacity: 1;
-}
+
 
 .blue-background{
   background-color: rgba(3, 62, 102, 1);

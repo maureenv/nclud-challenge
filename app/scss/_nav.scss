@@ -157,7 +157,6 @@
 
   .small-logo{
     @extend .nav-logo;
-    @include animate(0.5s);
     position: absolute;
     right: 0;
     z-index: 2;
