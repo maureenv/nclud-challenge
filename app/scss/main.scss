@@ -324,3 +324,30 @@
     @extend .button-white;
   }
 }
+
+
+.footer{
+  @extend .blue-gradient-bg;
+  border-top: 2px solid $dark-blue;
+  height: 350px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  .grid-bg{
+    @include large-tile;
+    @extend .base-positioning;
+    position: absolute;
+    height: 100%;
+  }
+
+  .access {
+    @extend .small-title;
+    margin-top: 100px;
+    margin-bottom: 25px;
+  }
+
+  .button{
+    @extend .small-button;
+  }
+}

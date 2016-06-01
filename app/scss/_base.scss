@@ -160,17 +160,6 @@ $dark-blue: #002947;
 
 }
 
-// for text that appears over blue screen in news section
-.news-screen-text{
-  .date{
-    @extend .date-style;
-  }
-
-  .date-description{
-    @extend .news-description;
-  }
-}
-
 // allow news content to be displayed over blue background
 .contain-news{
   position: relative;

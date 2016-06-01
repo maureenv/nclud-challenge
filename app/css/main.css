@@ -50,7 +50,7 @@ body, h1, h2, h3, h4, div, p {
   -moz-osx-font-smoothing: grayscale;
   /* for firefox font */ }
 
-.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title, .button, .main-nav, .small-title {
+.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title, .button, .main-nav, .small-title, .footer .access {
   text-transform: uppercase; }
 
 .title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title {
@@ -58,7 +58,7 @@ body, h1, h2, h3, h4, div, p {
   font-weight: 300;
   line-height: 1.1; }
 
-.small-title {
+.small-title, .footer .access {
   font-size: 18px;
   font-weight: 400;
   color: #ade1f9; }
@@ -84,7 +84,7 @@ body, h1, h2, h3, h4, div, p {
 .blue-background, .blue-bg-text, .masthead, .the-funds, .investments, .capabilities {
   background-color: #033e66; }
 
-.blue-gradient-bg {
+.blue-gradient-bg, .footer {
   background: #013f68;
   background: -moz-linear-gradient(top, #013f68 0%, #002c47 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #013f68), color-stop(100%, #002c47));
@@ -97,7 +97,7 @@ body, h1, h2, h3, h4, div, p {
 .blue-screen, .screen {
   background-color: rgba(3, 62, 102, 0.9); }
 
-.base-positioning, .main-nav, .masthead, .outer-container {
+.base-positioning, .main-nav, .masthead, .outer-container, .footer .grid-bg {
   top: 0;
   left: 0;
   width: 100%; }
@@ -165,7 +165,7 @@ body, h1, h2, h3, h4, div, p {
   -moz-osx-font-smoothing: grayscale;
   /* for firefox font */ }
 
-.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title, .button, .main-nav, .small-title {
+.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title, .button, .main-nav, .small-title, .footer .access {
   text-transform: uppercase; }
 
 .title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title {
@@ -173,7 +173,7 @@ body, h1, h2, h3, h4, div, p {
   font-weight: 300;
   line-height: 1.1; }
 
-.small-title {
+.small-title, .footer .access {
   font-size: 18px;
   font-weight: 400;
   color: #ade1f9; }
@@ -256,6 +256,54 @@ body, h1, h2, h3, h4, div, p {
     padding: 0px;
     border: none; }
 
+.footer-link-container {
+  max-width: 900px;
+  padding: 0 20px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  @media screen and (max-width: 600px) {
+    .footer-link-container {
+      height: 110px; } }
+  .footer-link-container .footer-li {
+    font-size: 11px;
+    font-weight: 700;
+    float: left;
+    text-transform: uppercase;
+    margin-right: 50px; }
+    @media screen and (max-width: 600px) {
+      .footer-link-container .footer-li {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 15px; } }
+  .footer-link-container .footer-li a {
+    color: #a3aaba; }
+  .footer-link-container .social-icon {
+    float: right;
+    width: 16px;
+    height: 16px; }
+    @media screen and (max-width: 600px) {
+      .footer-link-container .social-icon {
+        display: none; } }
+  .footer-link-container .social-icon:last-child {
+    margin-left: 50px; }
+  .footer-link-container .copyright {
+    color: #1aa2de;
+    font-weight: 700;
+    float: left;
+    clear: left;
+    font-size: 9px;
+    text-transform: uppercase;
+    margin-top: 10px; }
+    @media screen and (max-width: 600px) {
+      .footer-link-container .copyright {
+        float: none;
+        text-align: center; } }
+
 .button-bg, .button-blue, .inner-container-narrow .button, .the-funds .button, .capabilities .button {
   background: rgba(20, 65, 86, 0.8); }
 
@@ -287,7 +335,7 @@ body, h1, h2, h3, h4, div, p {
     display: inline-block;
     position: absolute; }
 
-.button-small-style, .small-button {
+.button-small-style, .small-button, .footer .button {
   width: 200px;
   height: 40px;
   padding-right: 40px;
@@ -299,9 +347,9 @@ body, h1, h2, h3, h4, div, p {
   text-align: center;
   position: relative; }
 
-.small-button {
+.small-button, .footer .button {
   display: inline-block; }
-  .small-button:after {
+  .small-button:after, .footer .button:after {
     content: "";
     width: 40px;
     height: 40px;
@@ -630,3 +678,19 @@ body, h1, h2, h3, h4, div, p {
   @media screen and (max-width: 1000px) {
     .news .vertical-center:nth-child(3) {
       display: none; } }
+
+.footer {
+  border-top: 2px solid #002947;
+  height: 350px;
+  width: 100%;
+  text-align: center;
+  position: relative; }
+  .footer .grid-bg {
+    background: url("../images/grid-pattern.png");
+    background-size: 1000px;
+    opacity: 0.1;
+    position: absolute;
+    height: 100%; }
+  .footer .access {
+    margin-top: 100px;
+    margin-bottom: 25px; }
