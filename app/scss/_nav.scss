@@ -9,6 +9,17 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d212b', endColorstr='#0d212b', GradientType=0 );
 }
 
+.small-nav-bg{
+  background: rgba(13,33,43,1);
+  background: -moz-linear-gradient(top, rgba(13,33,43,1) 0%, rgba(13,33,43,0.93) 58%, rgba(13,33,43,0.76) 77%, rgba(13,33,43,0.7) 84%, rgba(13,33,43,0.44) 90%, rgba(13,33,43,0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(13,33,43,1)), color-stop(58%, rgba(13,33,43,0.93)), color-stop(77%, rgba(13,33,43,0.76)), color-stop(84%, rgba(13,33,43,0.7)), color-stop(90%, rgba(13,33,43,0.44)), color-stop(100%, rgba(13,33,43,0)));
+  background: -webkit-linear-gradient(top, rgba(13,33,43,1) 0%, rgba(13,33,43,0.93) 58%, rgba(13,33,43,0.76) 77%, rgba(13,33,43,0.7) 84%, rgba(13,33,43,0.44) 90%, rgba(13,33,43,0) 100%);
+  background: -o-linear-gradient(top, rgba(13,33,43,1) 0%, rgba(13,33,43,0.93) 58%, rgba(13,33,43,0.76) 77%, rgba(13,33,43,0.7) 84%, rgba(13,33,43,0.44) 90%, rgba(13,33,43,0) 100%);
+  background: -ms-linear-gradient(top, rgba(13,33,43,1) 0%, rgba(13,33,43,0.93) 58%, rgba(13,33,43,0.76) 77%, rgba(13,33,43,0.7) 84%, rgba(13,33,43,0.44) 90%, rgba(13,33,43,0) 100%);
+  background: linear-gradient(to bottom, rgba(13,33,43,1) 0%, rgba(13,33,43,0.93) 58%, rgba(13,33,43,0.76) 77%, rgba(13,33,43,0.7) 84%, rgba(13,33,43,0.44) 90%, rgba(13,33,43,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d212b', endColorstr='#0d212b', GradientType=0 );
+}
+
 .main-nav {
   @extend .nav-bg;
   @extend .base-positioning;
@@ -17,6 +28,9 @@
   height: 120px;
   position: fixed;
   z-index: 100;
+  @media screen and (max-width: $break-medium) {
+    display: none;
+  }
 
   ul{
     max-width: 700px;
@@ -65,15 +79,7 @@
   }
 
   .logo {
-    background: url('../images/logo-secondary.png') no-repeat;
-    width: 100px;
-    height: 100px;
-    background-size: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: auto;
-    margin-top: 10px;
+    @extend .nav-logo
   }
 
   .home-link{
@@ -81,6 +87,83 @@
     border: none;
   }
 }
+
+
+// slide down nav
+.slide-down-nav{
+  @extend .small-nav-bg;
+  @extend .base-positioning;
+  @include animate(0.5s);
+  top: -400px;
+  font-size: $nav-size;
+  font-weight: $normal;
+  height: 550px;
+  z-index: 1;
+  position: absolute;
+  @media screen and (min-width: $break-medium) {
+    display: none;
+  }
+  @media screen and (max-width: $break-medium) {
+    display: block;
+  }
+
+  ul{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  li{
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  li:first-child{
+    margin-top: 50px;
+  }
+
+  a{
+    display: inline;
+    text-decoration: none;
+    color: $text-lightblue;
+  }
+
+  a:hover{
+    border-bottom: 1px solid $text-lightblue;
+  }
+}
+
+// for nav-button toggle effect
+.move-nav-down{
+  top: 0;
+}
+
+// logo and menu icons in small navbar
+.nav-image-container{
+  .nav-icon {
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    right: 0;
+    padding: 20px;
+    @media screen and (min-width: $break-medium) {
+      display: none;
+    }
+    @media screen and (max-width: $break-medium) {
+      display: block;
+    }
+  }
+
+  .small-logo{
+    @extend .nav-logo;
+    @include animate(0.5s);
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+}
+
 
 
 /// footer nav styling
@@ -110,7 +193,7 @@
       margin-bottom: 15px;
     }
   }
-    
+
   .footer-li a {
     color: $text-grayblue;
   }

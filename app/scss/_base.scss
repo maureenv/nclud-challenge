@@ -8,6 +8,13 @@ $break-medium: 1000px;
 
 $dark-blue: #002947;
 
+@mixin animate($time){
+  -webkit-transition: all ($time);
+  -moz-transition: all ($time);
+  -o-transition: all ($time);
+  transition: all ($time);
+}
+
 @mixin regular-img($image){
   background: url($image) no-repeat center center;
   -webkit-background-size: cover;
@@ -83,6 +90,14 @@ $dark-blue: #002947;
   }
 }
 
+.no-opacity{
+  opacity: 0;
+}
+
+.full-opacity{
+  opacity: 1;
+}
+
 .blue-background{
   background-color: rgba(3, 62, 102, 1);
 }
@@ -102,6 +117,18 @@ $dark-blue: #002947;
 
 .blue-screen{
   background-color: rgba(3, 62, 102, 0.9);
+}
+
+.nav-logo {
+  background: url('../images/logo-secondary.png') no-repeat;
+  width: 100px;
+  height: 100px;
+  background-size: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .base-positioning{
