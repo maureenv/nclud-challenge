@@ -1,4 +1,6 @@
 /* CSS RESET */
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -38,3 +40,174 @@ html {
 
 *, *:before, *:after {
   box-sizing: border-box; }
+
+/* colors */
+/* font-size */
+/* font-weight */
+body, h1, h2, h3, h4, div, p {
+  font-family: "Titillium Web", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* for firefox font */ }
+
+.title, .blue-bg-text .section-title, .masthead .section-title, .white-bg-text .section-title, .button, .main-nav, .small-title {
+  text-transform: uppercase; }
+
+.title, .blue-bg-text .section-title, .masthead .section-title, .white-bg-text .section-title {
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 1.1; }
+
+.small-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ade1f9; }
+
+.paragraph, .news-description, .blue-bg-text .description, .masthead .description, .white-bg-text .description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4; }
+
+.date-style {
+  font-weight: 700;
+  font-size: 11px;
+  color: #1aa2de;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 15px; }
+
+.news-description {
+  color: #fff;
+  padding-bottom: 20px;
+  max-width: 300px; }
+
+.blue-background, .blue-bg-text, .masthead {
+  background-color: #033e66; }
+
+.blue-gradient-bg {
+  background: #013f68;
+  background: -moz-linear-gradient(top, #013f68 0%, #002c47 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #013f68), color-stop(100%, #002c47));
+  background: -webkit-linear-gradient(top, #013f68 0%, #002c47 100%);
+  background: -o-linear-gradient(top, #013f68 0%, #002c47 100%);
+  background: -ms-linear-gradient(top, #013f68 0%, #002c47 100%);
+  background: linear-gradient(to bottom, #013f68 0%, #002c47 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013f68', endColorstr='#002c47', GradientType=0 ); }
+
+.blue-screen {
+  background-color: rgba(3, 62, 102, 0.9); }
+
+.base-positioning, .masthead, .outer-container {
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.header-background-positioning, .masthead-bg, .overlayc {
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 90vh; }
+
+.blue-bg-text .section-title, .masthead .section-title {
+  color: #ade1f9; }
+
+.blue-bg-text .description, .masthead .description {
+  color: #fff; }
+
+.white-bg-text .section-title {
+  color: #0b3d62;
+  text-align: left; }
+
+.white-bg-text .description {
+  color: #6c7379;
+  text-align: left; }
+
+/* colors */
+/* font-size */
+/* font-weight */
+body, h1, h2, h3, h4, div, p {
+  font-family: "Titillium Web", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* for firefox font */ }
+
+.title, .blue-bg-text .section-title, .masthead .section-title, .white-bg-text .section-title, .button, .main-nav, .small-title {
+  text-transform: uppercase; }
+
+.title, .blue-bg-text .section-title, .masthead .section-title, .white-bg-text .section-title {
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 1.1; }
+
+.small-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ade1f9; }
+
+.paragraph, .news-description, .blue-bg-text .description, .masthead .description, .white-bg-text .description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4; }
+
+.date-style {
+  font-weight: 700;
+  font-size: 11px;
+  color: #1aa2de;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 15px; }
+
+.news-description {
+  color: #fff;
+  padding-bottom: 20px;
+  max-width: 300px; }
+
+/* styling for header content */
+.masthead {
+  /* set all text color for header */
+  position: relative; }
+  @media screen and (max-width: 600px) {
+    .masthead .section-title {
+      font-size: 30px; }
+    .masthead .description {
+      font-size: 18px; } }
+
+.outer-container {
+  height: 100%;
+  position: absolute;
+  text-align: center; }
+
+.inner-container-narrow {
+  max-width: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  margin: 0 auto; }
+  .inner-container-narrow .section-title {
+    margin-top: 50px;
+    padding-bottom: 30px; }
+
+.masthead-bg {
+  position: relative;
+  background: url("../images/home-hero-small.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.3; }
+
+.overlayc {
+  position: absolute;
+  background: url("../images/overlay-c.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.3;
+  opacity: 0.5; }
+
+/* end header styling */

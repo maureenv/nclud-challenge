@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700');
+
+$mainfont:'Titillium Web', sans-serif;
+
+/* colors */
+$text-lightblue: #ade1f9;
+$text-blue: #1aa2de;
+$text-darkblue: #0b3d62;
+$text-white: #fff;
+$text-gray: #6c7379;
+$text-grayblue: #a3aaba;;
+
+/* font-size */
+$title-size: 35px;
+$paragraph-size: 20px;
+$nav-size: 14px;
+$xxs-text: 11px;
+
+/* font-weight */
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+body, h1, h2, h3, h4, div, p {
+  font-family: $mainfont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* for firefox font */
+}
+
+// operations for text
+.title, .button, .main-nav, .small-title {
+  text-transform: uppercase;
+}
+.title{
+  font-size: $title-size;
+  font-weight: $light;
+  line-height: 1.1;
+}
+
+.small-title{
+  font-size: 18px;
+  font-weight: $normal;
+  color: $text-lightblue;
+
+}
+
+.paragraph{
+  font-size: $paragraph-size;
+  font-weight: $normal;
+  line-height: 1.4;
+}
+
+.date-style{
+  font-weight: $bold;
+  font-size: $xxs-text;
+  color: $text-blue;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.news-description{
+  @extend .paragraph;
+  color: $text-white;
+  padding-bottom: 20px;
+  max-width: 300px;
+}

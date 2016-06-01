@@ -1,0 +1,147 @@
+// media query variables
+$break-small: 600px;
+$break-medium: 1000px;
+
+
+// general mixin's, variables and extensions
+@import "typography";
+
+$dark-blue: #002947;
+
+@mixin regular-img($image){
+  background: url($image) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin blue-img($image){
+  @include regular-img($image)
+  opacity: 0.3;
+}
+
+@mixin tile-bg{
+  background: url('../images/grid-pattern.png');
+  background-size: 650px;
+}
+
+@mixin large-tile{
+    background: url('../images/grid-pattern.png');
+    background-size: 1000px;
+    opacity: 0.1;
+}
+
+@mixin container-width($size){
+  max-width: ($size);
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  margin: 0 auto;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+-moz-transform: rotate($deg);
+-ms-transform: rotate($deg);
+-o-transform: rotate($deg);
+transform: rotate($deg);
+}
+
+@mixin vertical($position){
+  position: ($position);
+  top: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  text-align: center;
+}
+
+@mixin horiz-center($width){
+  max-width: ($width);
+  margin: auto;
+}
+
+@mixin vert-center($column-width){
+  display: inline-block;
+  vertical-align: middle;
+  width: $column-width;
+}
+
+@mixin break-small-text{
+  .section-title{
+    font-size: 30px;
+  }
+  .description{
+  font-size: 18px;
+}
+}
+
+.blue-background{
+  background-color: rgba(3, 62, 102, 1);
+}
+
+.blue-gradient-bg{
+
+background: rgba(1,63,104,1);
+background: -moz-linear-gradient(top, rgba(1,63,104,1) 0%, rgba(0,44,71,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(1,63,104,1)), color-stop(100%, rgba(0,44,71,1)));
+background: -webkit-linear-gradient(top, rgba(1,63,104,1) 0%, rgba(0,44,71,1) 100%);
+background: -o-linear-gradient(top, rgba(1,63,104,1) 0%, rgba(0,44,71,1) 100%);
+background: -ms-linear-gradient(top, rgba(1,63,104,1) 0%, rgba(0,44,71,1) 100%);
+background: linear-gradient(to bottom, rgba(1,63,104,1) 0%, rgba(0,44,71,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013f68', endColorstr='#002c47', GradientType=0 );
+
+}
+
+.blue-screen{
+  background-color: rgba(3, 62, 102, 0.9);
+}
+
+.base-positioning{
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-background-positioning{
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 90vh;
+}
+
+// for text that appears over blue background
+.blue-bg-text{
+  @extend .blue-background;
+  .section-title{
+    @extend .title;
+    color: $text-lightblue;
+  }
+
+  .description{
+    @extend .paragraph;
+    color: $text-white;
+  }
+}
+
+// for text that appears over white background
+.white-bg-text{
+  .section-title{
+    @extend .title;
+    color: $text-darkblue;
+    text-align: left;
+  }
+
+  .description{
+    @extend .paragraph;
+    color: $text-gray;
+    text-align: left;
+  }
+}

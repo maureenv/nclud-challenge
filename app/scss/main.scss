@@ -1,1 +1,48 @@
 @import "reset";
+@import "base";
+@import "typography";
+
+
+/* styling for header content */
+.masthead{
+  @extend .blue-bg-text; /* set all text color for header */
+  @extend .base-positioning;
+  position: relative;
+  @media screen and (max-width: $break-small) {
+    @include break-small-text;
+  }
+}
+
+.outer-container{
+  @extend .base-positioning;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.inner-container-narrow{
+  @include container-width(400px);
+
+  .section-title{
+    margin-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .button{
+    
+  }
+}
+
+.masthead-bg{
+  position: relative;
+  @extend .header-background-positioning;
+  @include blue-img('../images/home-hero-small.jpg');
+}
+
+.overlayc{
+  position: absolute;
+  @extend .header-background-positioning;
+  @include blue-img('../images/overlay-c.png');
+  opacity: 0.5;
+}
+/* end header styling */
