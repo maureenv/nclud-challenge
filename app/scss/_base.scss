@@ -145,3 +145,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013f68', end
     text-align: left;
   }
 }
+
+.container{
+  width: 100%;
+  position: relative;
+  float: left;
+  font-size: 0; // remove spacing between inline-block elements
+}
+
+.column{
+  float: left;
+  margin: auto;
+  position: relative;
+
+}

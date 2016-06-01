@@ -31,7 +31,7 @@
   }
 
   .button{
-      @extend .button-blue;
+    @extend .button-blue;
   }
 }
 
@@ -48,3 +48,110 @@
   opacity: 0.5;
 }
 /* end header styling */
+
+/* begin styling of each section below header */
+.the-firm{
+  @extend .white-bg-text;
+  @include tile-bg;
+
+  .horizontal-center{
+    @include horiz-center(900px);
+  }
+
+  .vertical-center{
+    @include vert-center(50%);
+    @media screen and (max-width: $break-small) {
+      @include vert-center(100%);
+    }
+
+    @media screen and (max-width: $break-small) {
+      @include break-small-text;
+    }
+
+  }
+
+  .vertical-center:first-child{
+    padding: 20px 20px 20px 20px;
+    @media screen and (max-width: $break-small) {
+      text-align: center; // for centering button
+      .section-title, .description{
+        text-align: center;
+      }
+    }
+  }
+
+  .section-title{
+    padding-bottom: 20px;
+  }
+
+  .column-image{
+    width: 90%;
+    float: right;
+    @media screen and (max-width: $break-small) {
+      float: none;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+  }
+
+  .button{
+    @extend .button-white;
+  }
+}
+
+
+
+.the-funds{
+  @extend .blue-bg-text;
+  @media screen and (max-width: $break-small) {
+    @include break-small-text;
+  }
+
+  .center-text{
+    width: 100%;
+    @include vertical(absolute);
+  }
+
+  .content-width{
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+
+  .section-title{
+    margin-bottom: 20px;
+  }
+
+  .vertical-center{
+    @include vert-center(percentage(1/3));
+    height: 600px;
+    @media screen and (max-width: $break-small) {
+      @include vert-center(percentage(1));
+    }
+
+  }
+
+  .vertical-center:nth-child(1){
+    @include blue-img('../images/construction.jpg');
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
+  }
+
+  .vertical-center:nth-child(2){
+    @include blue-img('../images/325-Lex-AD-E7-UNCROPPED.jpg');
+  }
+
+  .vertical-center:nth-child(3){
+    @include blue-img('../images/325_lexington_1bed_Living.jpg');
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
+  }
+
+  .button{
+    @extend .button-blue;
+  }
+}
