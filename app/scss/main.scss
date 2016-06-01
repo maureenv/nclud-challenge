@@ -155,3 +155,99 @@
     @extend .button-blue;
   }
 }
+
+
+.investments{
+  @extend .blue-bg-text;
+  background-color: #0f1d20;
+  height: 600px;
+  display: table;
+  @media screen and (max-width: $break-small) {
+    @include break-small-text;
+  }
+
+  .horizontal-center{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .vertical-center{
+    @include horiz-center(900px);
+  }
+
+  .vertical-center:first-child{
+    padding: 20px 20px 20px 20px;
+  }
+
+  .column {
+    max-width: 300px;
+    @media screen and (max-width: $break-small) {
+      text-align: center; // for button
+      max-width: 100%;
+      .section-title, .description{
+        text-align: center;
+      }
+    }
+  }
+
+  .section-title{
+    padding-bottom: 20px;
+  }
+
+  .map{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:url('../images/investments-map-static.png') no-repeat;
+    background-size: contain;
+    background-position: right;
+    @media screen and (max-width: $break-small) {
+      background-position: bottom;
+      opacity: 0.15;
+    }
+  }
+
+  .button{
+    @extend .button-white;
+  }
+
+}
+
+
+.capabilities{
+  @extend .blue-bg-text;
+  @media screen and (max-width: $break-small) {
+    @include break-small-text;
+  }
+
+  .center-text{
+    width: 100%;
+    @include vertical(absolute);
+  }
+
+  .content-width{
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+
+  .section-title{
+    margin-bottom: 20px;
+  }
+
+  .vertical-center{
+    @include vert-center(100%);
+    height: 600px;
+
+  }
+
+  .vertical-center{
+    @include blue-img('../images/325_lexington_PH_Patio_View2.jpg');
+  }
+
+  .button{
+    @extend .button-blue;
+  }
+
+}
