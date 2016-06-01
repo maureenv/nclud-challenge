@@ -1,0 +1,87 @@
+.button-bg{
+  background: rgba(20, 65, 86, 0.8);
+}
+
+.button-style{
+  width: 250px;
+  height: 50px;
+  padding-right: 50px;
+  line-height: 50px;
+  color: $text-blue;
+  border: 2px solid $text-blue;
+  font-weight: $bold;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+
+}
+
+.button-white{
+  @extend .button-style;
+  margin-top: 40px;
+  display: inline-block;
+
+    &:after{
+      content: "";
+      width: 50px;
+      height: 50px;
+      margin-top: -2px;
+      margin-left: 20px;
+      right: 0;
+      background: url('../images/carret.svg') no-repeat center center;
+      background-size: 35px 35px;
+      background-color: $text-blue;
+      display: inline-block;
+      position: absolute;
+    }
+}
+
+.button-blue{
+  @extend .button-white;
+  @extend .button-bg;
+}
+
+.button-small-style{
+  width: 200px;
+  height: 40px;
+  padding-right: 40px;
+  line-height: 40px;
+  color: $text-blue;
+  border: 2px solid $text-blue;
+  font-weight: $bold;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.small-button{
+  @extend .button-small-style;
+  display: inline-block;
+  &:after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    margin-top: -2px;
+    margin-left: 20px;
+    right: 0;
+    background: url('../images/carret.svg') no-repeat center center;
+    background-size: 30px 30px;
+    background-color: $text-blue;
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+// arrow button in header
+.round-button{
+    background: url('../images/arrow.svg') no-repeat;
+    position: relative;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    @include rotate(90deg);
+    margin-top: 40px;
+    opacity: 0.7;
+
+}

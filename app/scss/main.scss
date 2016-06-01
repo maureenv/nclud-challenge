@@ -1,6 +1,8 @@
 @import "reset";
 @import "base";
 @import "typography";
+@import "nav";
+@import "button";
 
 
 /* styling for header content */
@@ -29,7 +31,7 @@
   }
 
   .button{
-    
+      @extend .button-blue;
   }
 }
 
