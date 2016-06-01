@@ -249,5 +249,78 @@
   .button{
     @extend .button-blue;
   }
+}
 
+
+
+.news{
+  .section-title{
+    margin-bottom: 20px;
+  }
+
+  .vertical-center{
+    @include vert-center(percentage(1/3));
+    height: 400px;
+    @media screen and (max-width: $break-medium) {
+      @include vert-center(percentage(1/2));
+
+    }
+
+    @media screen and (max-width: $break-small) {
+      @include vert-center(percentage(1));
+    }
+
+
+  }
+
+  .vertical-center:nth-child(1){
+    @extend .white-bg-text;
+    @include tile-bg;
+    @media screen and (max-width: $break-small) {
+      @include break-small-text;
+    }
+
+    .column{
+      @include vertical(relative); //center vertical
+      padding: 20px;
+      width: 100%;
+
+    }
+
+    .center-column{ //center horizontal
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: left;
+      @media screen and (max-width: $break-small) {
+        text-align: center; // for button
+        .section-title, .description{
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .vertical-center:nth-child(2){
+    @include regular-img('../images/DGPPan_LR-(1).jpg');
+    .column{
+      @extend .contain-news;
+    }
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
+  }
+
+  .vertical-center:nth-child(3){
+    @include regular-img('../images/15-Cliff-Kitchen.jpg');
+    .column{
+      @extend .contain-news;
+    }
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
+  }
+
+  .button{
+    @extend .button-white;
+  }
 }

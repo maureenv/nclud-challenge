@@ -50,10 +50,10 @@ body, h1, h2, h3, h4, div, p {
   -moz-osx-font-smoothing: grayscale;
   /* for firefox font */ }
 
-.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .button, .main-nav, .small-title {
+.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title, .button, .main-nav, .small-title {
   text-transform: uppercase; }
 
-.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title {
+.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title {
   font-size: 35px;
   font-weight: 300;
   line-height: 1.1; }
@@ -63,12 +63,12 @@ body, h1, h2, h3, h4, div, p {
   font-weight: 400;
   color: #ade1f9; }
 
-.paragraph, .news-description, .blue-bg-text .description, .masthead .description, .the-funds .description, .investments .description, .capabilities .description, .white-bg-text .description, .the-firm .description {
+.paragraph, .news-description, .news-screen-text .date-description, .screen .date-description, .blue-bg-text .description, .masthead .description, .the-funds .description, .investments .description, .capabilities .description, .white-bg-text .description, .the-firm .description, .news .vertical-center:nth-child(1) .description {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.4; }
 
-.date-style {
+.date-style, .news-screen-text .date, .screen .date {
   font-weight: 700;
   font-size: 11px;
   color: #1aa2de;
@@ -76,7 +76,7 @@ body, h1, h2, h3, h4, div, p {
   padding-top: 5px;
   padding-bottom: 15px; }
 
-.news-description {
+.news-description, .news-screen-text .date-description, .screen .date-description {
   color: #fff;
   padding-bottom: 20px;
   max-width: 300px; }
@@ -94,7 +94,7 @@ body, h1, h2, h3, h4, div, p {
   background: linear-gradient(to bottom, #013f68 0%, #002c47 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013f68', endColorstr='#002c47', GradientType=0 ); }
 
-.blue-screen {
+.blue-screen, .screen {
   background-color: rgba(3, 62, 102, 0.9); }
 
 .base-positioning, .main-nav, .masthead, .outer-container {
@@ -114,11 +114,11 @@ body, h1, h2, h3, h4, div, p {
 .blue-bg-text .description, .masthead .description, .the-funds .description, .investments .description, .capabilities .description {
   color: #fff; }
 
-.white-bg-text .section-title, .the-firm .section-title {
+.white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title {
   color: #0b3d62;
   text-align: left; }
 
-.white-bg-text .description, .the-firm .description {
+.white-bg-text .description, .the-firm .description, .news .vertical-center:nth-child(1) .description {
   color: #6c7379;
   text-align: left; }
 
@@ -133,6 +133,29 @@ body, h1, h2, h3, h4, div, p {
   margin: auto;
   position: relative; }
 
+.contain-news, .news .vertical-center:nth-child(2) .column, .news .vertical-center:nth-child(3) .column {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.screen {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  padding: 15px;
+  border-top: 3px solid #1aa2de; }
+  .screen:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #1aa2de transparent;
+    position: absolute;
+    top: -10px; }
+
 /* colors */
 /* font-size */
 /* font-weight */
@@ -142,10 +165,10 @@ body, h1, h2, h3, h4, div, p {
   -moz-osx-font-smoothing: grayscale;
   /* for firefox font */ }
 
-.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .button, .main-nav, .small-title {
+.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title, .button, .main-nav, .small-title {
   text-transform: uppercase; }
 
-.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title {
+.title, .blue-bg-text .section-title, .masthead .section-title, .the-funds .section-title, .investments .section-title, .capabilities .section-title, .white-bg-text .section-title, .the-firm .section-title, .news .vertical-center:nth-child(1) .section-title {
   font-size: 35px;
   font-weight: 300;
   line-height: 1.1; }
@@ -155,12 +178,12 @@ body, h1, h2, h3, h4, div, p {
   font-weight: 400;
   color: #ade1f9; }
 
-.paragraph, .news-description, .blue-bg-text .description, .masthead .description, .the-funds .description, .investments .description, .capabilities .description, .white-bg-text .description, .the-firm .description {
+.paragraph, .news-description, .news-screen-text .date-description, .screen .date-description, .blue-bg-text .description, .masthead .description, .the-funds .description, .investments .description, .capabilities .description, .white-bg-text .description, .the-firm .description, .news .vertical-center:nth-child(1) .description {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.4; }
 
-.date-style {
+.date-style, .news-screen-text .date, .screen .date {
   font-weight: 700;
   font-size: 11px;
   color: #1aa2de;
@@ -168,7 +191,7 @@ body, h1, h2, h3, h4, div, p {
   padding-top: 5px;
   padding-bottom: 15px; }
 
-.news-description {
+.news-description, .news-screen-text .date-description, .screen .date-description {
   color: #fff;
   padding-bottom: 20px;
   max-width: 300px; }
@@ -236,7 +259,7 @@ body, h1, h2, h3, h4, div, p {
 .button-bg, .button-blue, .inner-container-narrow .button, .the-funds .button, .capabilities .button {
   background: rgba(20, 65, 86, 0.8); }
 
-.button-style, .button-white, .button-blue, .inner-container-narrow .button, .the-funds .button, .capabilities .button, .the-firm .button, .investments .button {
+.button-style, .button-white, .button-blue, .inner-container-narrow .button, .the-funds .button, .capabilities .button, .the-firm .button, .investments .button, .news .button {
   width: 250px;
   height: 50px;
   padding-right: 50px;
@@ -248,10 +271,10 @@ body, h1, h2, h3, h4, div, p {
   text-align: center;
   position: relative; }
 
-.button-white, .button-blue, .inner-container-narrow .button, .the-funds .button, .capabilities .button, .the-firm .button, .investments .button {
+.button-white, .button-blue, .inner-container-narrow .button, .the-funds .button, .capabilities .button, .the-firm .button, .investments .button, .news .button {
   margin-top: 40px;
   display: inline-block; }
-  .button-white:after, .button-blue:after, .inner-container-narrow .button:after, .the-funds .button:after, .capabilities .button:after, .the-firm .button:after, .investments .button:after {
+  .button-white:after, .button-blue:after, .inner-container-narrow .button:after, .the-funds .button:after, .capabilities .button:after, .the-firm .button:after, .investments .button:after, .news .button:after {
     content: "";
     width: 50px;
     height: 50px;
@@ -539,3 +562,71 @@ body, h1, h2, h3, h4, div, p {
   -o-background-size: cover;
   background-size: cover;
   opacity: 0.3; }
+
+.news .section-title {
+  margin-bottom: 20px; }
+
+.news .vertical-center {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33.33333%;
+  height: 400px; }
+  @media screen and (max-width: 1000px) {
+    .news .vertical-center {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%; } }
+  @media screen and (max-width: 600px) {
+    .news .vertical-center {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%; } }
+
+.news .vertical-center:nth-child(1) {
+  background: url("../images/grid-pattern.png");
+  background-size: 650px; }
+  @media screen and (max-width: 600px) {
+    .news .vertical-center:nth-child(1) .section-title {
+      font-size: 30px; }
+    .news .vertical-center:nth-child(1) .description {
+      font-size: 18px; } }
+  .news .vertical-center:nth-child(1) .column {
+    position: relative;
+    top: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    text-align: center;
+    padding: 20px;
+    width: 100%; }
+  .news .vertical-center:nth-child(1) .center-column {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left; }
+    @media screen and (max-width: 600px) {
+      .news .vertical-center:nth-child(1) .center-column {
+        text-align: center; }
+        .news .vertical-center:nth-child(1) .center-column .section-title, .news .vertical-center:nth-child(1) .center-column .description {
+          text-align: center; } }
+
+.news .vertical-center:nth-child(2) {
+  background: url("../images/DGPPan_LR-(1).jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media screen and (max-width: 600px) {
+    .news .vertical-center:nth-child(2) {
+      display: none; } }
+
+.news .vertical-center:nth-child(3) {
+  background: url("../images/15-Cliff-Kitchen.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media screen and (max-width: 1000px) {
+    .news .vertical-center:nth-child(3) {
+      display: none; } }
