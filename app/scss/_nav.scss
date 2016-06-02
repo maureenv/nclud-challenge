@@ -76,6 +76,11 @@
   .contact a {
     color: $text-blue;
     border: 1px solid $text-blue;
+    @include animate(0.3s);
+    &:hover{
+      color: white;
+      border-color: white;
+    }
   }
 
   .logo {

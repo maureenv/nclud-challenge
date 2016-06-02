@@ -7,6 +7,7 @@ $break-medium: 1000px;
 @import "typography";
 
 $dark-blue: #002947;
+$medium-blue: #0d80b3;
 
 @mixin animate($time){
   -webkit-transition: all ($time);
@@ -197,8 +198,9 @@ $dark-blue: #002947;
 .screen{ // for blue screen on news section
   @extend .news-screen-text;
   @extend .blue-screen;
+  @include animate(0.3s);
   width: 100%;
-  bottom: 0;
+  bottom: -80px;
   position: absolute;
   padding: 15px;
   border-top: 3px solid $text-blue;

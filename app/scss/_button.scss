@@ -18,11 +18,13 @@
 
 .button-white{
   @extend .button-style;
+  @include  animate(0.3s);
   margin-top: 40px;
   display: inline-block;
 
     &:after{
       content: "";
+      @include  animate(0.3s);
       width: 50px;
       height: 50px;
       margin-top: -2px;
@@ -34,7 +36,18 @@
       display: inline-block;
       position: absolute;
     }
+
+    &:hover{
+      border-color: $medium-blue;
+      color: $medium-blue;
+        &:after{
+          content:"";
+          background-color: $medium-blue;
+        }
+
+    }
 }
+
 
 .button-blue{
   @extend .button-white;
@@ -42,6 +55,7 @@
 }
 
 .button-small-style{
+  @include  animate(0.3s);
   width: 200px;
   height: 40px;
   padding-right: 40px;
@@ -59,6 +73,7 @@
   display: inline-block;
   &:after{
     content: "";
+    @include  animate(0.3s);
     width: 40px;
     height: 40px;
     margin-top: -2px;
@@ -69,6 +84,16 @@
     background-color: $text-blue;
     display: inline-block;
     position: absolute;
+  }
+
+  &:hover{
+    border-color: $medium-blue;
+    color: $medium-blue;
+      &:after{
+        content:"";
+        background-color: $medium-blue;
+      }
+
   }
 }
 

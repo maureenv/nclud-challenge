@@ -155,8 +155,12 @@ body, h1, h2, h3, h4, div, p {
   left: 0; }
 
 .screen {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   width: 100%;
-  bottom: 0;
+  bottom: -80px;
   position: absolute;
   padding: 15px;
   border-top: 3px solid #1aa2de; }
@@ -268,7 +272,14 @@ body, h1, h2, h3, h4, div, p {
     position: absolute; }
   .main-nav .contact a {
     color: #1aa2de;
-    border: 1px solid #1aa2de; }
+    border: 1px solid #1aa2de;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .main-nav .contact a:hover {
+      color: white;
+      border-color: white; }
   .main-nav .home-link {
     padding: 0px;
     border: none; }
@@ -392,10 +403,18 @@ body, h1, h2, h3, h4, div, p {
   position: relative; }
 
 .button-white, .button-blue, .inner-container-narrow .button, .the-funds .button, .capabilities .button, .the-firm .button, .investments .button, .news .button {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   margin-top: 40px;
   display: inline-block; }
   .button-white:after, .button-blue:after, .inner-container-narrow .button:after, .the-funds .button:after, .capabilities .button:after, .the-firm .button:after, .investments .button:after, .news .button:after {
     content: "";
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     width: 50px;
     height: 50px;
     margin-top: -2px;
@@ -406,8 +425,18 @@ body, h1, h2, h3, h4, div, p {
     background-color: #1aa2de;
     display: inline-block;
     position: absolute; }
+  .button-white:hover, .button-blue:hover, .inner-container-narrow .button:hover, .the-funds .button:hover, .capabilities .button:hover, .the-firm .button:hover, .investments .button:hover, .news .button:hover {
+    border-color: #0d80b3;
+    color: #0d80b3; }
+    .button-white:hover:after, .button-blue:hover:after, .inner-container-narrow .button:hover:after, .the-funds .button:hover:after, .capabilities .button:hover:after, .the-firm .button:hover:after, .investments .button:hover:after, .news .button:hover:after {
+      content: "";
+      background-color: #0d80b3; }
 
 .button-small-style, .small-button, .footer .button {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   width: 200px;
   height: 40px;
   padding-right: 40px;
@@ -423,6 +452,10 @@ body, h1, h2, h3, h4, div, p {
   display: inline-block; }
   .small-button:after, .footer .button:after {
     content: "";
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     width: 40px;
     height: 40px;
     margin-top: -2px;
@@ -433,6 +466,12 @@ body, h1, h2, h3, h4, div, p {
     background-color: #1aa2de;
     display: inline-block;
     position: absolute; }
+  .small-button:hover, .footer .button:hover {
+    border-color: #0d80b3;
+    color: #0d80b3; }
+    .small-button:hover:after, .footer .button:hover:after {
+      content: "";
+      background-color: #0d80b3; }
 
 .round-button {
   background: url("../images/arrow.svg") no-repeat;
@@ -740,6 +779,10 @@ body, h1, h2, h3, h4, div, p {
   @media screen and (max-width: 600px) {
     .news .vertical-center:nth-child(2) {
       display: none; } }
+  .news .vertical-center:nth-child(2):hover {
+    cursor: pointer; }
+    .news .vertical-center:nth-child(2):hover .screen {
+      bottom: 0; }
 
 .news .vertical-center:nth-child(3) {
   background: url("../images/15-Cliff-Kitchen.jpg") no-repeat center center;
@@ -750,6 +793,10 @@ body, h1, h2, h3, h4, div, p {
   @media screen and (max-width: 1000px) {
     .news .vertical-center:nth-child(3) {
       display: none; } }
+  .news .vertical-center:nth-child(3):hover {
+    cursor: pointer; }
+    .news .vertical-center:nth-child(3):hover .screen {
+      bottom: 0; }
 
 .footer {
   border-top: 2px solid #002947;

@@ -308,6 +308,13 @@
     @media screen and (max-width: $break-small) {
       display: none;
     }
+
+    &:hover{
+      cursor: pointer;
+      .screen{
+            bottom: 0;
+      }
+    }
   }
 
   .vertical-center:nth-child(3){
@@ -317,6 +324,14 @@
     }
     @media screen and (max-width: $break-medium) {
       display: none;
+    }
+
+    &:hover{
+      cursor: pointer;
+
+      .screen{
+            bottom: 0;
+      }
     }
   }
 
