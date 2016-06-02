@@ -58,11 +58,14 @@
     padding: 10px;
     text-decoration: none;
     color: $text-lightblue;
+    @include animate(0.3s);
+    border-bottom: 1px solid $invisible;
+
+    &:hover{
+      border-bottom: 1px solid $text-lightblue;
+    }
   }
 
-  a:hover{
-    border-bottom: 1px solid $text-lightblue;
-  }
 
   .contact{
     line-height: 100px;
@@ -132,14 +135,17 @@
     display: inline;
     text-decoration: none;
     color: $text-lightblue;
+    @include animate(0.3s);
+    border-bottom: 1px solid $invisible;
+
+    &:hover{
+      border-bottom: 1px solid $text-lightblue;
+    }
   }
 
-  a:hover{
-    border-bottom: 1px solid $text-lightblue;
-  }
 }
 
-// for nav-button toggle effect
+// for nav-button slide down effect with jQuery
 .move-nav-down{
   top: 0;
 }
@@ -200,6 +206,10 @@
 
   .footer-li a {
     color: $text-grayblue;
+    @include animate(0.3s);
+    &:hover{
+      color: white;
+    }
   }
 
   .social-icon{

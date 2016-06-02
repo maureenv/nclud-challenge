@@ -46,6 +46,7 @@
   @extend .header-background-positioning;
   @include blue-img('../images/overlay-c.png');
   opacity: 0.5;
+  display: none; // set to dislay none so that it will animate in on page load
 }
 /* end header styling */
 

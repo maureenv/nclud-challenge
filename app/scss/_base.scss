@@ -8,6 +8,7 @@ $break-medium: 1000px;
 
 $dark-blue: #002947;
 $medium-blue: #0d80b3;
+$invisible: rgba(255,255,255,0);
 
 @mixin animate($time){
   -webkit-transition: all ($time);

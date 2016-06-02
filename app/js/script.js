@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  /// fade in C overlay
+  $('.overlayc').fadeIn(2000);
 
   ///// Small navbar drop down animation
   $(".nav-icon").click(function(){
